@@ -77,20 +77,7 @@ const Work = () => {
                     alt={item.title}
                     className="transition-transform duration-700 group-hover:scale-105 grayscale"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-500 flex items-center justify-center">
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileHover={{ opacity: 1, y: 0 }}
-                      className="opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                    >
-                      <p className="text-white font-light text-xl tracking-[0.2em]">
-                        {item.title}
-                      </p>
-                      <p className="text-gray-400 font-light text-sm tracking-[0.2em] mt-2 text-center">
-                        {item.category}
-                      </p>
-                    </motion.div>
-                  </div>
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-500" />
                 </div>
               </motion.div>
             ))}
@@ -151,9 +138,6 @@ const Work = () => {
             <div className="text-center mt-6">
               <p className="text-white font-light text-2xl tracking-[0.2em]">
                 {selectedImage.title}
-              </p>
-              <p className="text-gray-400 font-light text-sm tracking-[0.2em] mt-2">
-                {selectedImage.category}
               </p>
             </div>
           </motion.div>
