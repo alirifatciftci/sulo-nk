@@ -37,9 +37,9 @@ const Work = () => {
   return (
     <>
       <SEO
-        title="Work | Süleyman Değirmenci | Tattoo Portfolio Istanbul"
-        description="Explore the portfolio of Süleyman Değirmenci, featuring realism, blackwork, and fine line tattoos from Istanbul."
-        keywords="tattoo portfolio, realism tattoo istanbul, blackwork tattoo, fine line tattoo, tattoo gallery"
+        title="Work | Süleyman Değirmenci | İstanbul Dövme Portföyü"
+        description="Süleyman Değirmenci'nin İstanbul'dan realism, blackwork ve fine line dövme çalışmalarını keşfedin. Istanbul tattoo portfolio."
+        keywords="istanbul dövme, dövme portföyü, realism tattoo istanbul, blackwork tattoo, fine line tattoo, tattoo gallery istanbul, istanbul tattoo studio, nişantaşı dövme"
       />
 
       <div className="min-h-screen bg-black pt-32 pb-16 px-6 md:px-12">

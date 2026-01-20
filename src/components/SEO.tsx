@@ -10,9 +10,9 @@ interface SEOProps {
 }
 
 const SEO = ({
-  title = "Süleyman Değirmenci | Professional Tattoo Artist Istanbul",
-  description = "Professional tattoo artist based in Istanbul, Nişantaşı. Specializing in realism, blackwork, and fine line tattoos. Book your appointment today.",
-  keywords = "tattoo artist istanbul, nişantaşı tattoo, realism tattoo, blackwork tattoo, fine line tattoo, süleyman değirmenci, istanbul dövmeci",
+  title = "Süleyman Değirmenci | İstanbul Dövme Sanatçısı | Istanbul Tattoo Artist",
+  description = "İstanbul Nişantaşı'nda profesyonel dövme sanatçısı. Realism, blackwork ve fine line dövme konusunda uzman. Professional tattoo artist in Istanbul, Nişantaşı specializing in realism, blackwork, and fine line tattoos.",
+  keywords = "istanbul dövme, istanbul dövme stüdyosu, istanbul dövmeci, istanbul tattoo, istanbul tattoo studio, nişantaşı dövme, tattoo artist istanbul, piercing istanbul, dövme sanatçısı, realism tattoo, blackwork tattoo, fine line tattoo, süleyman değirmenci",
   image = "/og-image.jpg",
   url = "https://suleymandegirmenci.com",
   type = "website"

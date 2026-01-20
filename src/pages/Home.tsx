@@ -16,7 +16,7 @@ const Home = () => {
             backgroundImage: `url(${bgImage})`,
           }}
         >
-          <div className="absolute inset-0 bg-black bg-opacity-70" />
+          <div className="absolute inset-0 bg-black bg-opacity-30" />
         </div>
 
         <div className="relative z-10 text-center px-6">
