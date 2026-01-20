@@ -1,0 +1,15 @@
+OG IMAGE NASIL OLUŞTURULUR:
+
+1. Canva.com'a git (ücretsiz)
+2. "Custom size" seç: 1200 x 630 piksel
+3. Şunu ekle:
+   - Siyah arka plan
+   - "SÜLEYMAN DEĞİRMENCİ" yazısı (beyaz, büyük)
+   - "TATTOO ARTIST ISTANBUL" alt yazı
+   - Bir dövme fotoğrafı (isteğe bağlı)
+4. "og-image.jpg" olarak indir
+5. Bu dosyayı public klasörüne koy
+
+ÖNEMLİ: Dosya adı tam olarak "og-image.jpg" olmalı
+
+Alternatif: Mevcut dövme fotoğraflarından birini 1200x630 boyutuna kırp ve og-image.jpg olarak kaydet.
