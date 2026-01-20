@@ -6,9 +6,10 @@ interface LazyImageProps {
   alt: string;
   className?: string;
   onClick?: () => void;
+  objectPosition?: string;
 }
 
-const LazyImage = ({ src, alt, className = '', onClick }: LazyImageProps) => {
+const LazyImage = ({ src, alt, className = '', onClick, objectPosition = 'center' }: LazyImageProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
@@ -50,7 +51,8 @@ const LazyImage = ({ src, alt, className = '', onClick }: LazyImageProps) => {
           transition={{ duration: 0.4, ease: 'easeOut' }}
           style={{ 
             imageOrientation: 'from-image',
-            WebkitImageOrientation: 'from-image'
+            WebkitImageOrientation: 'from-image',
+            objectPosition: objectPosition
           } as React.CSSProperties}
           className={`w-full h-full object-cover ${onClick ? 'cursor-pointer' : ''}`}
         />

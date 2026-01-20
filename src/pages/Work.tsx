@@ -58,7 +58,7 @@ const Work = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+          <div className="columns-2 md:columns-3 lg:columns-4 gap-4 md:gap-6">
             {portfolioData.map((item, index) => (
               <motion.div
                 key={item.id}
@@ -66,10 +66,10 @@ const Work = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-100px' }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="group"
+                className="group mb-4 md:mb-6 break-inside-avoid"
               >
                 <div
-                  className="relative aspect-[3/4] overflow-hidden cursor-pointer"
+                  className="relative overflow-hidden cursor-pointer"
                   onClick={() => setSelectedImage(item)}
                 >
                   <LazyImage

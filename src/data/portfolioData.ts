@@ -102,7 +102,7 @@ export const portfolioData: PortfolioItem[] = [
 export const artistInfo = {
   name: "Süleyman Değirmenci",
   location: "İSTANBUL / NİŞANTAŞI",
-  bio: "My journey in the art of tattooing began in Alanya, Antalya, where I discovered my passion for transforming skin into canvas. Today, I continue my artistic journey in Istanbul's prestigious Nişantaşı district, creating pieces that are a collaboration between artist and canvas, combining classical techniques with contemporary aesthetics.",
+  bio: "My journey in the art of tattooing began in Alanya, Antalya. The passion I discovered through seeing skin as a canvas gradually evolved beyond an admiration for permanent art, becoming a dedicated craft shaped by years of practice, discipline, and countless hours spent perfecting my technique. Today, I continue my artistic journey in Nişantaşı, considered the heart of Istanbul. Working with clients who trust me to turn their visions into reality is a true privilege. Each piece I create is a lasting reflection of a strong collaboration between artist and canvas, preserving the stories told and the memories made. My approach blends classical tattoo techniques with a contemporary aesthetic, aiming to transform every design into not just a work of art, but a timeless and authentic expression of individuality.",
   statement: "I believe in the power of permanent art to tell stories, preserve memories, and express the inexpressible.",
   specialties: ["Realism", "Blackwork", "Fine Line", "Geometric"],
   whatsapp: "+905534310982",

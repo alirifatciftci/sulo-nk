@@ -89,14 +89,14 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="px-6 md:px-12"
           >
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
               {portfolioData.slice(0, 4).map((item) => (
                 <Link
                   key={item.id}
                   to="/work"
                   className="group cursor-pointer"
                 >
-                  <div className="relative aspect-[2/3] overflow-hidden bg-gray-900 rounded-sm">
+                  <div className="relative aspect-[3/4] overflow-hidden rounded-sm">
                     <img
                       src={item.imageUrl}
                       alt={item.title}
