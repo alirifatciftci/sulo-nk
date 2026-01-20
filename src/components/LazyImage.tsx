@@ -48,7 +48,10 @@ const LazyImage = ({ src, alt, className = '', onClick }: LazyImageProps) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: isLoaded ? 1 : 0 }}
           transition={{ duration: 0.4, ease: 'easeOut' }}
-          style={{ imageOrientation: 'from-image' }}
+          style={{ 
+            imageOrientation: 'from-image',
+            WebkitImageOrientation: 'from-image'
+          } as React.CSSProperties}
           className={`w-full h-full object-cover ${onClick ? 'cursor-pointer' : ''}`}
         />
       )}

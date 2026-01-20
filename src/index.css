@@ -14,6 +14,16 @@
   
   img {
     image-orientation: from-image;
+    -webkit-image-orientation: from-image;
+    object-fit: cover;
+  }
+  
+  /* Force correct orientation for all images */
+  img[src*=".JPG"],
+  img[src*=".jpg"],
+  img[src*=".jpeg"],
+  img[src*=".JPEG"] {
+    image-orientation: from-image !important;
   }
 }
 

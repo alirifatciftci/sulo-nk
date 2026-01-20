@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import SEO from '../components/SEO';
@@ -8,19 +8,19 @@ import { portfolioData, PortfolioItem } from '../data/portfolioData';
 const Work = () => {
   const [selectedImage, setSelectedImage] = useState<PortfolioItem | null>(null);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     if (!selectedImage) return;
     const currentIndex = portfolioData.findIndex(item => item.id === selectedImage.id);
     const nextIndex = (currentIndex + 1) % portfolioData.length;
     setSelectedImage(portfolioData[nextIndex]);
-  };
+  }, [selectedImage]);
 
-  const handlePrev = () => {
+  const handlePrev = useCallback(() => {
     if (!selectedImage) return;
     const currentIndex = portfolioData.findIndex(item => item.id === selectedImage.id);
     const prevIndex = (currentIndex - 1 + portfolioData.length) % portfolioData.length;
     setSelectedImage(portfolioData[prevIndex]);
-  };
+  }, [selectedImage]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -32,7 +32,7 @@ const Work = () => {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedImage]);
+  }, [selectedImage, handleNext, handlePrev]);
 
   return (
     <>
@@ -133,6 +133,10 @@ const Work = () => {
             <img
               src={selectedImage.imageUrl}
               alt={selectedImage.title}
+              style={{ 
+                imageOrientation: 'from-image',
+                WebkitImageOrientation: 'from-image'
+              } as React.CSSProperties}
               className="w-full max-h-[80vh] object-contain grayscale mx-auto"
             />
           </motion.div>
