@@ -135,11 +135,6 @@ const Work = () => {
               alt={selectedImage.title}
               className="w-full max-h-[80vh] object-contain grayscale mx-auto"
             />
-            <div className="text-center mt-6">
-              <p className="text-white font-light text-2xl tracking-[0.2em]">
-                {selectedImage.title}
-              </p>
-            </div>
           </motion.div>
         </motion.div>
       )}
