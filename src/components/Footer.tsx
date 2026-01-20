@@ -48,13 +48,13 @@ const Footer = () => {
           <p className="text-gray-600 font-light text-xs text-center tracking-[0.2em]">
             © {new Date().getFullYear()} {artistInfo.name}. ALL RIGHTS RESERVED.
           </p>
-          <p className="text-gray-600 font-light text-xs text-center mt-2">
+          <p className="text-gray-400 font-light text-xs text-center mt-2">
             designed by{' '}
             <a
               href="https://www.linkedin.com/in/alirifatciftci"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-opacity duration-300 hover:opacity-60"
+              className="text-gray-300 transition-opacity duration-300 hover:opacity-60"
             >
               alirifatçiftçi
             </a>

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, MessageCircle } from 'lucide-react';
 import SEO from '../components/SEO';
 import { portfolioData, artistInfo } from '../data/portfolioData';
 import bgImage from '../assets/sulo99.png';
@@ -71,6 +71,20 @@ const Home = () => {
             <ChevronDown className="text-white opacity-60" size={32} />
           </motion.div>
         </motion.div>
+
+        {/* WhatsApp Button */}
+        <motion.a
+          href={`https://wa.me/${artistInfo.whatsapp.replace(/[^0-9]/g, '')}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 1.5 }}
+          className="fixed bottom-8 right-8 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+          aria-label="WhatsApp"
+        >
+          <MessageCircle size={28} />
+        </motion.a>
       </div>
 
       <section className="bg-black py-24 md:py-32">
