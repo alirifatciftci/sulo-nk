@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import SEO from '../components/SEO';
 import { portfolioData, artistInfo } from '../data/portfolioData';
+import bgImage from '../assets/sulo99.png';
 
 const Home = () => {
   return (
@@ -12,7 +13,7 @@ const Home = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat grayscale"
           style={{
-            backgroundImage: 'url(/src/assets/sulo99.png)',
+            backgroundImage: `url(${bgImage})`,
           }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-70" />

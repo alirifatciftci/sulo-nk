@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 import { artistInfo } from '../data/portfolioData';
+import aboutImage from '../assets/about.jpeg';
 
 const About = () => {
   return (
@@ -37,7 +38,7 @@ const About = () => {
             >
               <div className="relative aspect-[3/4] w-full max-w-md">
                 <img
-                  src="/src/assets/about.jpeg"
+                  src={aboutImage}
                   alt="Süleyman Değirmenci"
                   className="w-full h-full object-cover grayscale"
                 />
