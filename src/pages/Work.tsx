@@ -75,6 +75,7 @@ const Work = () => {
                   <LazyImage
                     src={item.imageUrl}
                     alt={item.title}
+                    priority={index < 6}
                     className="transition-transform duration-700 group-hover:scale-105 grayscale"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-500" />

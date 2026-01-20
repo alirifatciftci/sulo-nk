@@ -18,6 +18,9 @@ const Home = () => {
         >
           <div className="absolute inset-0 bg-black bg-opacity-30" />
         </div>
+        
+        {/* Preload background image */}
+        <link rel="preload" as="image" href={bgImage} />
 
         <div className="relative z-10 text-center px-6">
           <motion.div
@@ -90,7 +93,7 @@ const Home = () => {
             className="px-6 md:px-12"
           >
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
-              {portfolioData.slice(0, 4).map((item) => (
+              {portfolioData.slice(0, 4).map((item, index) => (
                 <Link
                   key={item.id}
                   to="/work"
@@ -100,6 +103,8 @@ const Home = () => {
                     <img
                       src={item.imageUrl}
                       alt={item.title}
+                      loading={index < 4 ? "eager" : "lazy"}
+                      fetchPriority={index < 2 ? "high" : "auto"}
                       className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 grayscale"
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300" />

@@ -7,14 +7,17 @@ interface LazyImageProps {
   className?: string;
   onClick?: () => void;
   objectPosition?: string;
+  priority?: boolean;
 }
 
-const LazyImage = ({ src, alt, className = '', onClick, objectPosition = 'center' }: LazyImageProps) => {
+const LazyImage = ({ src, alt, className = '', onClick, objectPosition = 'center', priority = false }: LazyImageProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
+  const [isInView, setIsInView] = useState(priority);
   const imgRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (priority) return; // Skip observer for priority images
+    
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -30,7 +33,7 @@ const LazyImage = ({ src, alt, className = '', onClick, objectPosition = 'center
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [priority]);
 
   return (
     <div ref={imgRef} className={`relative overflow-hidden bg-gray-900 ${className}`}>
@@ -43,7 +46,8 @@ const LazyImage = ({ src, alt, className = '', onClick, objectPosition = 'center
         <motion.img
           src={src}
           alt={alt}
-          loading="lazy"
+          loading={priority ? "eager" : "lazy"}
+          fetchPriority={priority ? "high" : "auto"}
           onLoad={() => setIsLoaded(true)}
           onClick={onClick}
           initial={{ opacity: 0 }}
